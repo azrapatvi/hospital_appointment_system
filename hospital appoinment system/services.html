@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <link rel="stylesheet" href="style1.css"> <!-- Your main stylesheet -->
+
+    <!-- Internal CSS only for modal styles -->
+    <style>
+        /* Modal Overlay */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Modal Content Box */
+        .modal-content {
+            background: white;
+            padding: 20px;
+            max-width: 500px;
+            border-radius: 10px;
+            position: relative;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Close Button */
+        #closeModal {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Modal Body */
+        .modal-body {
+            text-align: center;
+        }
+
+        .modal-body img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+        }
+
+        .navbar .active {
+            text-decoration: underline;
+            font-size: 21px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="main_nav">
+        <div class="logo-title">
+            <a href="index.html"><img src="logo.jpg" width="90px" height="90px" class="logo"></a>
+            <h1 class="title">Medical Care</h1>
+        </div>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="services.html" class="active">Services</a></li>
+            <li><a href="dr.html">Doctors</a></li>
+            <li><a href="book.php">Booking</a></li>
+        </ul>
+
+    </nav>
+
+    <div class="services">
+        <div class="title_services">
+            <h1 style="display: inline; font-size: 40px;color: #333333;">Our</h1>
+            <h1 style="font-size: 50px; display: inline; color: #05696c;">Services</h1>
+        </div>
+
+        <div class="row">
+            <div class="col"><img src="checkup.png">
+                <h3>Free Checkup</h3>
+                <p>Get regular health checkups at zero cost to ensure your well-being.</p>
+            </div>
+            <div class="col"><img src="ambulance.png">
+                <h3>24/7 Ambulance</h3>
+                <p>Round-the-clock ambulance service for emergency medical needs.</p>
+            </div>
+            <div class="col"><img src="dr.png">
+                <h3>Experts Consultancy</h3>
+                <p>Consult top medical professionals for accurate diagnosis and advice.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <img src="pills.png" alt="Medicines Icon">
+                <h3>Medicines</h3>
+                <p>Access quality and affordable medicines to support your treatment and recovery.</p>
+            </div>
+            <div class="col">
+                <img src="bed.png" alt="Bed Facility Icon">
+                <h3>Bed Facility</h3>
+                <p>Clean, comfortable, and well-equipped beds available for in-patient care.</p>
+            </div>
+            <div class="col">
+                <img src="heart.png" alt="Total Care Icon" style="width: 170px; height: 170px;">
+                <h3>Total Care</h3>
+                <p>Comprehensive medical care tailored for your overall physical and mental health.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="specialties">
+        <div class="title_services">
+            <h1 style="display: inline; font-size: 40px;color: #333333;">Our</h1>
+            <h1 style="font-size: 50px; display: inline; color: #05696c;">Specialties</h1>
+        </div>
+
+        <div class="row2">
+            <div class="col2">
+                <img src="Anesthesiology.jpg" width="250px" height="180px">
+                <h3 class="title_specialties">Anesthesiology</h3>
+                <a href="#" class="read-more" data-title="Anesthesiology"
+                    data-description="Anesthesiology specializes in pain relief during surgeries and procedures."
+                    data-image="Anesthesiology.jpg">read more</a>
+            </div>
+
+            <div class="col2">
+                <img src="biochemistry.jpg" width="250px" height="180px">
+                <h3 class="title_specialties">Biochemistry</h3>
+                <a href="#" class="read-more" data-title="Biochemistry"
+                    data-description="Biochemistry explores chemical processes within and related to living organisms."
+                    data-image="biochemistry.jpg">read more</a>
+            </div>
+
+            <div class="col2">
+                <img src="cardio.jpeg" width="250px" height="180px">
+                <h3 class="title_specialties">Cardiology</h3>
+                <a href="#" class="read-more" data-title="Cardiology"
+                    data-description="Cardiology is a medical specialty dealing with the diagnosis and treatment of heart disorders including congenital heart defects, coronary artery disease, heart failure, and more. Cardiologists also promote heart-healthy lifestyles and manage cardiac rehabilitation."
+                    data-image="cardio.jpeg">read more</a>
+            </div>
+
+            <div class="col2">
+                <img src="dermatology.jpg" width="250px" height="180px">
+                <h3 class="title_specialties">Dermatology</h3>
+                <a href="#" class="read-more" data-title="Dermatology"
+                    data-description="Dermatology focuses on diagnosis and treatment of skin, hair, and nail conditions."
+                    data-image="dermatology.jpg">read more</a>
+            </div>
+        </div>
+
+        <div class="row2">
+            <div class="col2">
+                <img src="ent.jpg" width="250px" height="180px">
+                <h3 class="title_specialties">ENT</h3>
+                <a href="#" class="read-more" data-title="ENT"
+                    data-description="ENT (Ear, Nose, and Throat) deals with disorders related to the ear, nose, throat, head, and neck."
+                    data-image="ent.jpg">read more</a>
+            </div>
+
+            <div class="col2">
+                <img src="forensic.jpg" width="250px" height="180px">
+                <h3 class="title_specialties">Forensic</h3>
+                <a href="#" class="read-more" data-title="Forensic"
+                    data-description="Forensic medicine applies medical knowledge to criminal investigations, including autopsies, toxicology, and identification of cause of death."
+                    data-image="forensic.jpg">read more</a>
+            </div>
+
+            <div class="col2">
+                <img src="medicine.jpg" width="250px" height="180px">
+                <h3 class="title_specialties">Medicine</h3>
+                <a href="#" class="read-more" data-title="Medicine"
+                    data-description="General Medicine focuses on the diagnosis, treatment, and prevention of adult diseases and is often the first point of contact for patients."
+                    data-image="medicine.jpg">read more</a>
+            </div>
+
+            <div class="col2">
+                <img src="microbiology.jpg" width="250px" height="180px">
+                <h3 class="title_specialties">Microbiology</h3>
+                <a href="#" class="read-more" data-title="Microbiology"
+                    data-description="Microbiology studies microscopic organisms like bacteria, viruses, fungi, and their role in health, disease, and biotechnology."
+                    data-image="microbiology.jpg">read more</a>
+            </div>
+        </div>
+
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 MedCare Hospital. All rights reserved.</p>
+            <p>Contact us: <a href="mailto:info@healthylife.com">info@healthylife.com</a> | +1-800-123-4567</p>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modalBox" style="display: none;">
+        <div class="modal-overlay">
+            <div class="modal-content">
+                <span id="closeModal">&times;</span>
+                <div class="modal-body">
+                    <img id="modalImage" src="" alt="Specialty Image">
+                    <div class="modal-text">
+                        <h2 id="modalTitle">Title</h2>
+                        <p id="modalDesc">Description</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.read-more').click(function (e) {
+                e.preventDefault();
+                let title = $(this).data('title');
+                let description = $(this).data('description');
+                let image = $(this).data('image');
+
+                $('#modalTitle').text(title);
+                $('#modalDesc').text(description);
+                $('#modalImage').attr('src', image);
+
+                $('#modalBox').show();
+            });
+            $('#closeModal').click(function () {
+                $('#modalBox').hide();
+            });
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <title>Hospital Appointment System</title>
+    <link rel="stylesheet" href="style1.css">
+    <style>
+        .navbar a {
+      text-decoration: none;
+    }
+    .navbar .active {
+      text-decoration: underline;
+      font-size: 21px;
+    }
+    </style>
+</head>
+
+<body>
+    <nav class="main_nav">
+        <div class="logo-title">
+            <a href="index.html"><img src="logo.jpg" width="90px" height="90px" class="logo"></a>
+            <h1 class="title">Medical Care</h1>
+        </div>
+        <ul class="navbar">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="dr.html">Doctors</a></li>
+            <li><a href="book.php">Booking</a></li>
+        </ul>
+
+    </nav>
+
+    <div class="hospital">
+        <div class="slideshow-container">
+            <div class="slide fade">
+                <div class="overlay"></div>
+                <img src="hospital1.2.jpg" class="hos_img" alt="Medical Care Facility">
+                <a href="book.php" class="book">Book Appointment</a>
+            </div>
+
+            <div class="slide fade">
+                <div class="overlay"></div>
+                <img src="h1.jpg" class="hos_img" alt="Medical Care Facility">
+                <a href="book.php" class="book">Book Appointment</a>
+                <div class="caption">Waiting Area For Families </div>
+            </div>
+            <div class="slide fade">
+                <div class="overlay"></div>
+                <img src="h6.jpg" class="hos_img" alt="Medical Care Facility">
+                <a href="book.php" class="book">Book Appointment</a>
+                <div class="caption">Reception Area</div>
+            </div>
+
+            <div class="slide fade">
+                <div class="overlay"></div>
+                <img src="h2.jpg" class="hos_img" alt="Medical Care Facility">
+                <a href="book.php" class="book">Book Appointment</a>
+                <div class="caption">Operation theatre</div>
+            </div>
+
+            <div class="slide fade">
+                <div class="overlay"></div>
+                <img src="h3.jpg" class="hos_img" alt="Medical Care Facility">
+                <a href="book.php" class="book">Book Appointment</a>
+                <div class="caption">Surgery</div>
+            </div>
+
+            <div class="slide fade">
+                <div class="overlay"></div>
+                <img src="h4.webp" class="hos_img" alt="Medical Care Facility">
+                <a href="book.php" class="book">Book Appointment</a>
+                <div class="caption">General Ward</div>
+            </div>
+
+            <div class="slide fade">
+                <div class="overlay"></div>
+                <img src="h5.webp" class="hos_img" alt="Medical Care Facility">
+                <a href="book.php" class="book">Book Appointment</a>
+                <div class="caption">Delivery</div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="contact">
+        <div class="col_home">
+            <div class="card c1">
+                <b>
+                    <p class="p2"><i class="fa-solid fa-location-dot"></i> OUR LOCATION<br></p>
+                </b>
+                <p class="p1">
+                    Medicare Hospital, Silver Plaza,<br>
+                    Road No. 33, Ramchandra Nagar,<br>
+                    Thane West, Maharashtra 400607
+                </p>
+            </div>
+
+            <div class="card c2">
+                <b>
+                    <p class="p2"><i class="fa-solid fa-phone"></i> CONNECT WITH US<br></p>
+                </b>
+                <p class="p1">CALL: 02352 244355</p>
+            </div>
+
+            <div class="card c3">
+                <b>
+                    <p class="p2"><i class="fa-regular fa-envelope"></i> WRITE TO US<br></p>
+                </b>
+                <p class="p1">medicarethane@gmail.com</p>
+            </div>
+
+        </div>
+
+        <form class="contact_us" action="query.php" method="POST">
+            <h2 class="query"> Drop Us A Message For Any Query</h2>
+            <input class="query_inputs" type="text" name="name" placeholder="Enter Your Name:">
+            <input class="query_inputs" type="email" name="email" placeholder="Enter Your Email:">
+            <input class="query_inputs" type="tel" name="phone" placeholder="Enter Your Phone No:">
+            <textarea class="query_inputs" name="message" rows="5" cols="15" placeholder="Enter Your Message:"></textarea>
+
+            <input class="query_submit" type="submit" value="Submit">
+        </form>
+    </div>
+    <div class="location">
+        <h1 class="loc">Location</h1>
+        <iframe class="map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120572.40280122276!2d72.8104966972656!3d19.200111600000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b9112577b29b%3A0x545e96c707206da7!2sMedicare%20Hospital!5e0!3m2!1sen!2sin!4v1747300159946!5m2!1sen!2sin"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 HealthyLife Hospital. All rights reserved.</p>
+            <p>Contact us: <a href="mailto:info@healthylife.com">info@healthylife.com</a> | +1-800-123-4567</p>
+        </div>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 4000); // Change slide every 4 seconds
+        }
+    </script>
+</body>
+
+</html>

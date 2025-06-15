@@ -1,0 +1,454 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous" />
+  <title>LSPGCOER Home Page</title>
+  <link rel="stylesheet" href="mystyle.css">
+  <style>
+    .zoom-on-load {
+      animation: zoomIn 0.6s ease-out forwards;
+    }
+
+    .main_section2 {
+      transform-origin: center center;
+      background-color: #f9f9f9;
+      padding: 30px;
+      border-radius: 3px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      margin: 50px auto;
+      max-width: 100%;
+    }
+
+    .ticker-wrapper {
+      display: flex;
+      align-items: center;
+      background-color: #e6e6e6;
+      border-radius: 25px;
+      overflow: hidden;
+      padding: 10px 20px;
+      font-family: sans-serif;
+    }
+
+    .ticker-label {
+      flex-shrink: 0;
+      font-weight: bold;
+      margin-right: 15px;
+      color: #333;
+      white-space: nowrap;
+    }
+
+    .ticker-content {
+      flex-grow: 1;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .ticker-move {
+      display: inline-block;
+      white-space: nowrap;
+      animation: scroll-left 80s linear infinite;
+      /* reduced from 90s */
+      animation-delay: 0s;
+    }
+
+    .ticker-move a {
+      margin-right: 40px;
+      text-decoration: none;
+      color: red;
+      font-weight: 600;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(10%);
+      }
+
+      100% {
+        transform: translateX(-100%);
+        /* Scroll left by half of the content width */
+      }
+    }
+
+    .info-section {
+      border: 1px solid #181c4e;
+      border-radius: 15px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+      overflow: hidden;
+    }
+
+    .info-header {
+      background-color: #181c4e;
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 1.25rem;
+      padding: 0.75rem 1.25rem;
+    }
+
+    .info-body {
+      padding: 1.25rem;
+    }
+
+    .info-body p {
+      margin-bottom: 0.8rem;
+      text-align: justify;
+    }
+
+    .bullet-symbol {
+      color: #181c4e;
+      margin-right: 6px;
+    }
+
+    @media (max-width: 576px) {
+      .info-header {
+        font-size: 1.1rem;
+        text-align: center;
+      }
+    }
+    /* Optional: Make text smaller on small screens */
+@media (max-width: 768px) {
+  .navbar-nav .nav-link {
+    font-size: 14px;
+  }
+}
+
+  </style>
+  <link rel="stylesheet" href="mystyle.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo-header-content">
+      <img src="images/dte-logo.png" alt="Logo" class="logo" />
+
+      <div>
+        <div class="heading1">Loknete Shamrao Peje Government College of Engineering, Ratnagiri</div>
+        <div class="headings">(An institute of Government of Maharashtra) (Established in 2021)</div>
+        <div class="headings">(Affiliated to Dr. Babasaheb Ambedkar Technological University, Lonere, Dist. Raigad)
+        </div>
+        <div class="headings">DTE Code: 3042 &nbsp;&nbsp;&nbsp; AICTE Permanent ID: 1-9442079401</div>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg bg-white">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">LSPGCOER</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav w-100 d-flex justify-content-evenly text-center mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">About Us</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="about_institute.html">About Institute</a></li>
+            <li><a class="dropdown-item" href="/Doc/Citizen charter new.pdf">Draft Citizens Charter</a></li>
+            <li><a class="dropdown-item" href="/Doc/List of committe.pdf">Committees</a></li>
+            <li><a class="dropdown-item" href="/Doc/Faculty Profile.pdf">Faculties</a></li>
+            <li><a class="dropdown-item" href="GCOER_programme.html">Course Details</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">Admission</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/Doc/IMP Instructions about admission in EN3042 for 2024-25.pdf" target="_blank">Detailed Guidelines For Admission Process</a></li>
+            <li><a class="dropdown-item" href="/Doc/Fee Structure 2024-25.pdf" target="_blank">Fee Structure</a></li>
+            <li><a class="dropdown-item" href="/Doc/प्रवेश विषयक  (4).pdf" target="_blank">FAQ about FE/DSE Admission</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">Departments</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="AI_Dept.html">Artificial Intelligence and Data Science</a></li>
+            <li><a class="dropdown-item" href="Civil_Dept.html">Civil and Infrastructure Engineering</a></li>
+            <li><a class="dropdown-item" href="Electrical_Dept.html">Electrical Engineering</a></li>
+            <li><a class="dropdown-item" href="Foodtech_Dept.html">Food Technology & Management</a></li>
+            <li><a class="dropdown-item" href="Mechatronics_Dept.html">Mechatronics Engineering</a></li>
+            <li><a class="dropdown-item" href="Science_Dept.html">Science & Humanities</a></li>
+            <li><a class="dropdown-item" href="Workshop.html">Workshop Department</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">Students Corner</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/Doc/Academic Calendar 2024-25.pdf" target="_blank">Academic Calendar</a></li>
+            <li><a class="dropdown-item" href="Syllabus.html">Syllabus</a></li>
+            <li><a class="dropdown-item" href="/Doc/LSPGCoE Ratnagiri Governance Manual for Students_w.e.f. January 01, 2025.pdf" target="_blank">Governance Manual</a></li>
+            <li><a class="dropdown-item" href="Student_Notice.html" target="_blank">Notice</a></li>
+            <li><a class="dropdown-item" href="/Doc/bonafide certificate procedure.pdf" target="_blank">Bonafide Procedure</a></li>
+            <li><a class="dropdown-item" href="/Doc/Application for Bonafide Certificate (1).pdf" target="_blank">Application Format</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">Facilities</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="GCOER_library.html">Library</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">Mandatory Disclosure</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/Doc/Mandatary disclosure New.pdf" target="_blank">Mandatory Disclosure 2024-25</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/Doc/RTI.pdf">RTI</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">T&P</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/Doc/LSPGCoER_Ind_Training_and_Internship Policy_Complete Draft Document (13 March 2025).pdf" target="_blank">Industry Institute Interaction Policy</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/Doc/EOA Report 2025-26.PDF">AICTE EOA</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="Doc/Grive.cell.pdf">Grievance Call</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  </header>
+
+  <div class="main">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/GCOER_BLD2.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="images/GCOER_BLD3.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="images/GCOER_BLD6.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="images/GCOER_BLD7.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="news_and_events">
+    <h1 class="nae">News,Events Of LSPGCOER</h1><a href="news_and_events.html" class="nae_btn">News And Events </a>
+  </div>
+
+  <div class="main_section2 zoom-on-load">
+    <h2 class="home_heading">Home Page</h2>
+    <div class="ticker-wrapper">
+      <div class="ticker-label">Notices:</div>
+      <div class="ticker-content">
+        <div class="ticker-move">
+          <span>
+            <a href="/Doc/FYBTECH(24-25)ACAP Round (Extended).pdf" target="_blank">Admission Notification for Against
+              CAP round (First Year)</a>
+            <a href="/Doc/DSE(24-25)-ACAP Round (extended).pdf" target="_blank">Admission Notification for Against CAP
+              round (Direct Second Year)</a>
+            <a href="#">College will remain open on holidays for College reporting Students for admission</a>
+            <a href="https://cetcell.mahacet.org/" target="_blank">Click here for Admission Process of First Year
+              Engineering</a>
+            <a href="https://dte.maharashtra.gov.in/" target="_blank">Click here to visit DTE Maharashtra Website</a>
+            <a href="/Doc/scholarship.pdf" target="_blank">Notice regarding scholarship document verification</a>
+            <a href="/Doc/women_grievance.pdf" target="_blank">women's grievance redressal committee</a>
+            <a href="/Doc/safety_protocols.pdf" target="_blank">Safety protocols for students attending offline
+              classes</a>
+            <a href="/Doc/scholorship.pdf" target="_blank">Information about scholorship</a>
+            <a href="/Doc/FE Admission Form With Undertaking.pdf" target="_blank">FE Admission Form with Undertaking</a>
+            <a href="https://www.youtube.com/watch?v=Cw4rq-bSQ_g" target="_blank">AICTE EVC 2021-22 Government College
+              of Engineering, Ratnagiri Available infrastructure and other facilities video. Dt. 05th June, 2021.</a>
+          </span>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="row m-5 justify-content-between">
+  <!-- Quick Links: Left -->
+  <div class="col-12 col-md-3 mb-3">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title c1">Quick Links</h5>
+        <a class="quote" href="http://www.aicte-india.org//" target="_blank">All India Council of Technical Education, Delhi (AICTE)</a><br>
+        <a class="quote" href="https://www.aicte-india.org/feedback/" target="_blank">Feedback facility of students and faculty available in AICTE Web-Portal</a><br>
+        <a class="quote" href="http://www.maharashtra.gov.in/" target="_blank">Government of Maharashtra (GoM)</a><br>
+      </div>
+    </div>
+  </div>
+
+  <!-- Latest Updates: Center and Wider -->
+  <div class="col-12 col-md-6 mb-3">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title c1">Latest Updates</h5>
+        <a href="/Doc/Quotation for Chemical and Material.pdf" target="_blank" class="quote">Quotation for Chemical & Material</a><br>
+        <a href="/Doc/Quotation for Mechatronics raw materíal..pdf" target="_blank" class="quote">Quotation for Mech raw material</a><br>
+        <a href="/Doc/Quotation for Workshop Material.pdf" target="_blank" class="quote">Quotation for Workshop material</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scholarship: Right -->
+  <div class="col-12 col-md-3 mb-3">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title c1">Scholarship</h5>
+        <a href="/Doc/Scholarship Notice.pdf" target="_blank" class="quote">Scholarship Notice</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="container my-5">
+      <div class="info-section" id="vision-box">
+        <div class="info-header" id="vision-heading">Institute Vision</div>
+        <div class="info-body" id="vision-body">
+          <p>“To develop technologically competent human resource to serve society”.</p>
+        </div>
+      </div>
+
+      <div class="info-section" id="mission-box">
+        <div class="info-header" id="mission-heading">Institute Mission</div>
+        <div class="info-body" id="mission-body">
+          <p><span class="bullet-symbol">•</span>To provide conducive environment for academic excellence in engineering
+            education.</p>
+          <p><span class="bullet-symbol">•</span>To create an intellectually stimulating environment for research,
+            scholarship, creativity, innovation and professional activities.</p>
+          <p><span class="bullet-symbol">•</span>Enhance career opportunities for students through Industry-Institute
+            interaction, value-added courses and projects in cutting edge technology.</p>
+          <p><span class="bullet-symbol">•</span>To promote services to community and revenue generation for sustainable
+            development.</p>
+        </div>
+      </div>
+    </div>
+    <div class="main_section3 text-center">
+
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="person-card">
+              <img height="120" src="GCOER WEBSITE/images/Venugopal.png">
+              <h5 class="person-role">Shri B Venugopal Reddy, IAS</h5>
+              <p class="person-message">"Hon.Addl.Chief Secretary,Higher &amp; Technical EducatioN"</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="person-card">
+              <img height="120" src="GCOER WEBSITE/images/mohitkar.png">
+              <h5 class="person-role">Dr.Vinod Mohitkar</h5>
+              <p class="person-message">"Director, DTE, Mumbai"</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="person-card">
+              <img height="120" src="GCOER WEBSITE/images/Naik Sir.jpg">
+              <h5 class="person-role">Shri.Pramod Naik</h5>
+              <p class="person-message">"Joint Director, Regional Office, Mumbai."</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="person-card">
+              <img height="120" src="GCOER WEBSITE/images/Patil Sir.jpeg">
+              <h5 class="person-role">Dr. Uday V. Patil</h5>
+              <p class="person-message">"Principal, Govt. College of Engg., Ratnagiri"</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-section">
+      <h2 class="contact-heading">Contact US</h2>
+      <div class="container">
+        <div class="row equal-height g-4">
+          <!-- Left Side: Info -->
+          <div class="col-md-6 d-flex flex-column justify-content-center">
+            <div class="contact-card">
+              <div class="d-flex align-items-center mb-2">
+                <i class="fas fa-clock contact-icon"></i>
+                <h4 class="mb-0">Working hours</h4>
+              </div>
+              <p class="mb-1">Monday–Saturday: 9:00–06:00 Hrs</p>
+              <p>The college remains closed on Sundays; and Second and Fourth Saturday of every month.</p>
+            </div>
+            <div class="contact-card">
+              <div class="d-flex align-items-center mb-2">
+                <i class="fas fa-map-marker-alt contact-icon"></i>
+                <h4 class="mb-0">We are here</h4>
+              </div>
+              <p class="mb-1">Lokenete Shamrao Peje Government College of Engineering Ratnagiri, Near Thiba palace Road,
+                Ratnagiri.</p>
+              <p class="mb-1">Pin Code - 415 612. Maharashtra.</p>
+              <p class="mb-1">Website Address - www.gcoer.ac.in</p>
+            </div>
+          </div>
+
+          <!-- Right Side: Map -->
+          <div class="col-md-6 contact-map">
+            <iframe class="map-iframe"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3815.7969871768373!2d73.31007007590466!3d16.984533414284062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bea0d328fd0fd81%3A0xf4a5d806ef0d4ef1!2sGovernment%20College%20of%20Engineering%2C%20Ratnagiri!5e0!3m2!1sen!2sin!4v1749115571225!5m2!1sen!2sin"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <footer class="foot text-center py-4">
+  <div class="container">
+    <p class="copy mb-3">
+      © Copyright 2021<br>
+      Maintained By : Government College of Engineering, Ratnagiri
+    </p>
+
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <a href="mailto:principal_gpr@rediffmail.com">
+        <img src="GCOER WEBSITE/images/gmail.jpg" alt="Gmail" height="45" width="45" />
+      </a>
+      <a href="#">
+        <img src="GCOER WEBSITE/images/fb.jpg" alt="Facebook" height="45" width="45" />
+      </a>
+      <a href="https://www.google.com/maps/place/Government+College+of+Engineering,+Ratnagiri/@16.9845334,73.3077794,17z/data=!3m1!4b1!4m6!3m5!1s0x3bea0d328fd0fd81:0xf4a5d806ef0d4ef1!8m2!3d16.9845283!4d73.312645!16s%2Fg%2F11pf1yf3mm?entry=ttu">
+        <img src="GCOER WEBSITE/images/map symbol.png" alt="Map" height="45" width="45" />
+      </a>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+</body>
+
+</html>

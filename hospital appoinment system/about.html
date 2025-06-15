@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>About Us</title>
+    <style>
+        .hospital-description {
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+            background-color: #f0fafa;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 .2rem .5rem rgba(0, 0, 0, 0.1);
+        }
+
+        .hospital-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .hospital-text {
+            flex: 1 1 45%;
+            font-size: 1.2rem;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        .hospital-image {
+            flex: 1 1 45%;
+            text-align: center;
+        }
+
+        .hospital-image img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 1rem;
+            box-shadow: 0 .2rem .5rem rgba(0, 0, 0, 0.2);
+        }
+
+        #heading {
+            text-align: center;
+            padding: 0rem 1rem 0.5rem 1rem;
+            /* top right bottom left */
+            font-size: 4rem;
+            letter-spacing: 0.1rem;
+            color: #05696c;
+            background-color: #f0f0f0;
+            box-shadow: 0 .3rem .5rem rgba(0, 0, 0, .3);
+        }
+
+        #title {
+            text-align: center;
+            margin-top: 0;
+            /* Ensure no extra margin */
+            padding: 0rem 1rem;
+            font-size: 2.5rem;
+            font-weight: 300;
+        }
+
+        .about .box-container {
+            padding: 4rem 0;
+        }
+
+        .about .box-container .box {
+            width: 75%;
+            margin: 0rem auto;
+            border-radius: .5rem;
+            box-shadow: 0 .3rem .5rem rgba(0, 0, 0, .3);
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+
+        }
+
+        .about .box-container .box:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+
+        .about .box-container .box h3,
+        .about .box-container .box p {
+            margin: 0;
+        }
+
+        .about .box-container .box .images {
+            max-height: 30rem;
+            width: 50%;
+        }
+
+        .about .box-container .box .images img {
+            max-height: 100%;
+            width: 100%;
+            object-fit: contain;
+            /* or 'cover' for cropped style*/
+        }
+
+
+        .about .box-container .box .content {
+            width: 50%;
+            height: 100%;
+            padding: 2rem;
+
+        }
+
+        .about .box-container .box .content h3 {
+            font-size: 3rem;
+            color: #054b52;
+            display: flex;
+            align-items: start;
+        }
+
+        .about .box-container .box .content p {
+            font-size: 1.5rem;
+            color: black;
+            padding: 1rem 0;
+            text-align: start;
+            font-weight: 100;
+        }
+
+        /* Button styling */
+
+
+        @media(max-width:768px) {
+            .about .box-container .box {
+
+                flex-flow: column;
+                width: 90%;
+
+
+            }
+
+            .about .box-container .box:nth-child(even) {
+                flex-flow: coloumn;
+            }
+
+            .about .box-container .box .images {
+                width: 100%;
+            }
+
+            .about .box-container .box .content {
+                width: 100%;
+            }
+        }
+
+        .learnMoreBtn {
+            padding: 0.7rem 1.5rem;
+            background-color: #05696c;
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .learnMoreBtn:hover {
+            background-color: #044e51;
+        }
+
+        /* Popup Overlay */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(5px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .popup-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            width: 80%;
+            max-width: 500px;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+            text-align: center;
+            position: relative;
+        }
+
+        .popup-card h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .popup-card p {
+            font-size: 1.1rem;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 2rem;
+            color: #999;
+            cursor: pointer;
+        }
+
+        .popup-img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+
+            margin-bottom: 1rem;
+        }
+
+        .hospital-importance {
+            text-align: center;
+            margin: 4rem 0;
+        }
+
+        .hospital-importance h2 {
+            font-size: 2.5rem;
+            color: #054b52;
+            margin-bottom: 2rem;
+        }
+
+        .importance-cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            /* Ensures cards stack on smaller screens */
+            gap: 2rem;
+        }
+
+        .importance-card {
+            background-color: #f9f9f9;
+            border-radius: 1rem;
+            width: 22%;
+            padding: 1.5rem;
+            box-shadow: 0 .2rem .5rem rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .importance-card:hover {
+            transform: translateY(-10px);
+            /* Hover effect */
+        }
+
+        .importance-card-img {
+            width: 100%;
+            max-width: 150px;
+            margin-bottom: 1.5rem;
+            border-radius: 1rem;
+        }
+
+        .importance-card h3 {
+            font-size: 1.6rem;
+            color: #054b52;
+            margin-bottom: 1rem;
+        }
+
+        .importance-card p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .hospital-certifications {
+            text-align: center;
+            margin: 4rem 0;
+
+        }
+
+        .hospital-certifications h2 {
+            font-size: 2.5rem;
+            color: #054b52;
+            margin-bottom: 2rem;
+        }
+
+        .certification-cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            /* Ensures cards stack on smaller screens */
+            gap: 2rem;
+        }
+
+        .certification-card {
+            background-color: #f9f9f9;
+            border-radius: 1rem;
+            width: 22%;
+            padding: 1.5rem;
+            box-shadow: 0 .2rem .5rem rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 2px solid #054b52;
+        }
+
+        .certification-card:hover {
+            transform: translateY(-10px);
+            /* Hover effect */
+        }
+
+        .certification-card-img {
+            width: 100%;
+            max-width: 150px;
+            margin-bottom: 1.5rem;
+            border-radius: 1rem;
+        }
+
+        .certification-card h3 {
+            font-size: 1.6rem;
+            color: #054b52;
+            margin-bottom: 1rem;
+        }
+
+        .certification-card p {
+            font-size: 1rem;
+            color: #555;
+        }
+    .navbar a {
+      text-decoration: none;
+    }
+    .navbar .active {
+      text-decoration: underline;
+      font-size: 21px;
+    }
+    </style>
+</head>
+
+<body>
+    <nav class="main_nav">
+        <div class="logo-title">
+            <a href="index.html"><img src="logo.jpg" width="90px" height="90px" class="logo"></a>
+            <h1 class="title">Medical Care</h1>
+        </div>
+        <ul class="navbar">
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="about.html" class="active">About us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="dr.html">Doctors</a></li>
+            <li><a href="book.php">Booking</a></li>
+        </ul>
+
+    </nav>
+    <section id="about" class="about">
+        
+        <div class="hospital-description">
+            <div class="hospital-content">
+                <div class="hospital-text">
+                    <p>
+                        Our hospital is committed to providing the highest quality medical care using advanced
+                        technology and a compassionate approach.
+                        With experienced professionals, state-of-the-art equipment, and a patient-first philosophy, we
+                        aim to ensure your health and well-being at every stage of treatment.
+                    </p>
+                </div>
+                <div class="hospital-image">
+                    <img src="hospital1.2.jpg" alt="Our Hospital">
+                </div>
+            </div>
+        </div>
+        <div class="hospital-certifications">
+            <h2>Our Certifications & Accreditations</h2>
+            <div class="certification-cards">
+                <div class="certification-card">
+                    <img src="certification.jpg" alt="ISO Certification" class="certification-card-img">
+                    <h3>ISO Certified Hospital</h3>
+                    <p>We are an ISO 9001 certified hospital, ensuring international standards of quality management and
+                        patient safety.</p>
+                </div>
+                <div class="certification-card">
+                    <img src="blood bank.jpg" alt="Authorized Blood Bank" class="certification-card-img">
+                    <h3>Authorized Blood Bank</h3>
+                    <p>Our blood bank is authorized and accredited by health authorities, ensuring safe and reliable
+                        blood donations.</p>
+                </div>
+                <div class="certification-card">
+                    <img src="accrediation.webp" alt="Accredited Hospital" class="certification-card-img">
+                    <h3>Accredited by National Health Authorities</h3>
+                    <p>We are accredited by leading national health authorities, ensuring our hospital meets the highest
+                        medical standards.</p>
+                </div>
+                <div class="certification-card">
+                    <img src="blood bank.jpg" alt="Emergency Care Certified" class="certification-card-img">
+                    <h3>Certified Emergency Care</h3>
+                    <p>Our emergency care unit is certified by the leading health boards to provide immediate and
+                        effective care 24/7.</p>
+                </div>
+            </div>
+        </div>
+
+    
+    </section>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 HealthyLife Hospital. All rights reserved.</p>
+            <p>Contact us: <a href="mailto:info@healthylife.com">info@healthylife.com</a> | +1-800-123-4567</p>
+        </div>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 4000); // Change slide every 4 seconds
+        }
+    </script>
+
+
+    <script>
+        const learnMoreBtns = document.querySelectorAll('.learnMoreBtn');
+        const popups = document.querySelectorAll('.popup-overlay');
+        const closeBtns = document.querySelectorAll('.close-btn');
+
+        learnMoreBtns.forEach((btn, index) => {
+            btn.addEventListener('click', () => {
+                popups[index].style.display = 'flex';
+            });
+        });
+
+        closeBtns.forEach((btn, index) => {
+            btn.addEventListener('click', () => {
+                popups[index].style.display = 'none';
+            });
+        });
+
+        popups.forEach((popup) => {
+            popup.addEventListener('click', (e) => {
+                if (e.target === popup) {
+                    popup.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctor Profile Card</title>
+    <link rel="stylesheet" href="style1.css">
+    <style>
+        .n {
+            text-align: center;
+            font-size: 45px;
+            color: #054b52;
+            margin: 10px 0;
+            padding: 20px;
+        }
+
+        .doctor-card {
+            display: flex;
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: white;
+            border: 2px solid #054b52;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-section {
+            position: relative;
+            flex: 1;
+            background-color: #eafaff;
+        }
+
+        .image-section img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .location {
+            position: absolute;
+            z-index: 2;
+            background-color: #0078b0;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        .info-section {
+            flex: 2;
+            padding: 20px;
+        }
+
+        .info-section h2 {
+            color: #2b2b2b;
+            margin-bottom: 10px;
+        }
+
+        .info-section h3 {
+            color: #444;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .info-section p {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            background-color: #054b52;
+            color: white;
+            padding: 10px 14px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #f0f0f0;
+            color: #054b52;
+        }
+
+        .navbar a {
+            text-decoration: none;
+        }
+
+        .navbar .active {
+            text-decoration: underline;
+            font-size: 21px;
+        
+        }
+        .re{
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="main_nav">
+        <div class="logo-title">
+            <a href="index.html"><img src="logo.jpg" width="90px" height="90px" class="logo"></a>
+            <h1 class="title">Medical Care</h1>
+        </div>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="dr.html" class="active">Doctors</a></li>
+            <li><a href="book.php">Booking</a></li>
+        </ul>
+
+    </nav>
+    <section id="heading">
+        <h1 class="n">Doctors</h1>
+
+        <!-- Eye Checkup -->
+        <div class="doctor-card">
+            <div class="image-section">
+                <img src="dr1.jpg" alt="Eye Specialist">
+                <div class="location">Dwarka - Delhi</div>
+            </div>
+            <div class="info-section">
+                <h2>DR. AYESH KHAN (General checkup)</h2>
+                <h3>Senior Consultant, Eye Checkup – Expert in Cataract & Vision Correction</h3>
+                <p><strong>QUALIFICATION :</strong> MBBS | MS (Ophthalmology)</p>
+                <div class="actions">
+                    <button onclick="viewProfile()"><a href="resume.pdf" target="_blank" class="re">View profile</a></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- General Physician -->
+        <div class="doctor-card">
+            <div class="image-section">
+                <img src="dr2.jpg" alt="General Physician">
+                <div class="location">Dwarka - Delhi</div>
+            </div>
+            <div class="info-section">
+                <h2>DR. ANJALI MEHTA</h2>
+                <h3>Consultant, General Medicine</h3>
+                <p><strong>QUALIFICATION :</strong> MBBS | MD (General Medicine)</p>
+                <div class="actions">
+                    <button onclick="viewProfile()">View profile</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pediatrician -->
+        <div class="doctor-card">
+            <div class="image-section">
+                <img src="dr3.webp" alt="Pediatrician">
+                <div class="location">Dwarka - Delhi</div>
+            </div>
+            <div class="info-section">
+                <h2>DR. PREM SHARMA</h2>
+                <h3>Consultant, Pediatrics – Child Specialist</h3>
+                <p><strong>QUALIFICATION :</strong> MBBS | MD (Pediatrics)</p>
+                <div class="actions">
+                    <button onclick="viewProfile()">View profile</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Physiotherapy -->
+        <div class="doctor-card">
+            <div class="image-section">
+                <img src="dr4.jpg" alt="Physiotherapist">
+                <div class="location">Dwarka - Delhi</div>
+            </div>
+            <div class="info-section">
+                <h2>DR. VIKAS RAWAT</h2>
+                <h3>Consultant, Physiotherapy – Muscle & Joint Specialist</h3>
+                <p><strong>QUALIFICATION :</strong> BPT | MPT (Orthopedics)</p>
+                <div class="actions">
+                    <button onclick="viewProfile()">View profile</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dermatologist -->
+        <div class="doctor-card">
+            <div class="image-section">
+                <img src="dr5.jpg" alt="Dermatologist">
+                <div class="location">Dwarka - Delhi</div>
+            </div>
+            <div class="info-section">
+                <h2>DR. NEHA SINGH</h2>
+                <h3>Consultant, Dermatology – Skin & Hair Specialist</h3>
+                <p><strong>QUALIFICATION :</strong> MBBS | MD (Dermatology)</p>
+                <div class="actions">
+                    <button onclick="viewProfile()">View profile</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Gastroenterologist -->
+        <div class="doctor-card">
+            <div class="image-section">
+                <img src="dr6.avif" alt="Dr. Avnish Seth">
+                <div class="location">Dwarka - Delhi</div>
+            </div>
+            <div class="info-section">
+                <h2>(COL) DR. AVNISHA SETH VSM</h2>
+                <h3>Chairman, Manipal Institute Of Gastroenterology</h3>
+                <p><strong>QUALIFICATION :</strong> MBBS | MD | DM (Gastroenterology)</p>
+                <div class="actions">
+                    <button onclick="viewProfile()">View profile</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cardiologist -->
+        <div class="doctor-card">
+            <div class="image-section">
+                <img src="dr2.jpg" alt="Dr. Lovely Beth">
+                <div class="location">Dwarka - Delhi</div>
+            </div>
+            <div class="info-section">
+                <h2>DR. LOVELY BETH</h2>
+                <h3>Consultant, Cardiology – Heart Failure & Interventions</h3>
+                <p><strong>QUALIFICATION :</strong> MBBS | MD | DM (Cardiology)</p>
+                <div class="actions">
+                    <button onclick="viewProfile()">View profile</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Neurologist -->
+        <div class="doctor-card">
+            <div class="image-section">
+                <img src="dr7.jpg" alt="Dr. Arun Mishra">
+                <div class="location">Dwarka - Delhi</div>
+            </div>
+            <div class="info-section">
+                <h2>DR. ARUN MISHRA</h2>
+                <h3>Consultant, Neurology – Stroke & Movement Disorders</h3>
+                <p><strong>QUALIFICATION :</strong> MBBS | MD | DM (Neurology)</p>
+                <div class="actions">
+                    <button onclick="viewProfile()">View profile</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 HealthyLife Hospital. All rights reserved.</p>
+            <p>Contact us: <a href="mailto:info@healthylife.com">info@healthylife.com</a> | +1-800-123-4567</p>
+        </div>
+    </footer>
+
+    <script>
+        function viewProfile() {
+            alert("Redirecting to doctor's profile...");
+        }
+    </script>
+</body>
+
+</html>

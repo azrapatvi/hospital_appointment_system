@@ -1,0 +1,108 @@
+
+raw_data = """
+Recurrent Neural Network (RNN) 
+Introduction
+A Recurrent Neural Network (RNN) is a special type of artificial neural network that is mainly used for data that comes in a sequence or follows a particular order. This includes examples like sentences, time series data, speech, or music.
+Unlike traditional neural networks which treat all inputs independently, RNNs take the previous input into account. This means RNNs can remember what was done before and use it while working on the current input. This memory feature makes RNNs suitable for tasks where **context** and **order** are important.
+Why RNN?
+In real-life language problems, the meaning of a word often depends on the words that came before it. For example:
+“He drank a glass of…”
+The next word could be “water,” “milk,” or “juice.”
+To predict this correctly, the model must remember what has already been said. A traditional neural network cannot do this. That is why we need an RNN — it keeps a form of memory of previous words or steps.
+
+
+How RNN Works
+
+RNNs have a loop in their architecture. This loop allows information to be passed from one step of the network to the next. This way, the network can carry information from the past into the present.
+
+At each step:
+
+The RNN takes the current input (for example, a word)
+It also takes the hidden state from the previous step (which contains information from past inputs)
+It updates the hidden state and gives an output (for example, the predicted next word)
+
+This process is repeated for every word or time step in the sequence.
+
+
+Architecture
+
+The architecture of a basic RNN includes the following parts:
+
+1. Input Layer: This is where the data is fed into the network. Each input is processed one step at a time.
+
+2. Hidden Layer: This layer contains the loop. It updates its internal state after receiving each new input. This is the part of the RNN that gives it memory.
+
+3. Output Layer: This layer produces the final output based on the current hidden state.
+
+The hidden state is updated each time based on the new input and the previous hidden state. This repeated use of the same structure at each time step is what gives RNNs the ability to handle sequences.
+
+Mathematical View (Simple Form)
+
+Let:
+
+$x_t$ = input at time t
+$h_t$ = hidden state at time t
+$y_t$ = output at time t
+
+Then the network works like this:
+
+$h_t = f(Wx \cdot x_t + Wh \cdot h_{t-1} + b)$
+$y_t = Wy \cdot h_t + by$
+
+Here:
+
+$Wx, Wh, Wy$ are weight matrices
+$b, by$ are bias terms
+$f$ is usually the tanh or ReLU function
+
+This means the current state $h_t$ is based on both the current input and the previous state.
+
+
+Example: Predicting the Next Word
+
+Suppose we have the sentence:
+"I am going to the"
+
+The RNN processes the words one by one:
+"I" → "am" → "going" → "to" → "the"
+
+At each step, it updates its internal memory. By the time it sees "the", it has learned the context and can now predict the next word might be something like “store” or “market”.
+
+This is how RNNs are used for next-word prediction.
+
+Applications of RNN
+
+1. Text Prediction: Predicting the next word or character in a sentence
+2. Machine Translation: Translating text from one language to another
+3. Speech Recognition: Converting spoken language into text
+4. Time Series Forecasting: Predicting stock prices, temperature, etc.
+5. Chatbots: Creating responses based on input conversation
+
+Advantages
+
+* RNNs can handle **variable-length sequences**
+* They can remember **previous inputs** which helps in understanding the context
+* Useful for **real-world tasks** that involve language, audio, or sequences
+
+Solutions to the Limitations
+
+To fix these problems, improved versions of RNNs were created:
+
+1. LSTM (Long Short-Term Memory)
+   LSTMs use gates to decide what information to keep or forget. They are much better at learning long-term relationships.
+
+2. GRU (Gated Recurrent Unit)
+   GRU is a simpler version of LSTM and is also good at handling long-term memory.
+
+These versions are now widely used in place of the basic RNN.
+
+
+Summary
+
+RNNs are designed to process sequential data.
+They use memory from past inputs to understand current input.
+They are powerful tools for language and time-based problems.
+While they have some issues, improved models like LSTM and GRU have solved many of them.
+"""
+
+

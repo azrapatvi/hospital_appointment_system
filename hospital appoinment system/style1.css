@@ -1,0 +1,359 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+.main_nav {
+    padding:5px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f0f0f0; /* Optional background */
+}
+.navbar {
+    font-size: 20px;
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+.navbar li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px;
+    transition: color 0.3s;
+}   
+.navbar li a:hover {
+    color: #05696c;
+}
+.logo-title{
+    display: flex;
+}
+.logo{
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Slideshow */
+.hospital {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slideshow-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hos_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Black transparent overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+/* Buttons & Caption */
+.book {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 25px;
+    font-size: 1.8rem;
+    background-color: #05696c;
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 15px;
+    cursor: pointer;
+    z-index: 2;
+    transition: background-color 0.3s;
+}
+
+.book:hover {
+    background-color:#f0f0f0 ;
+    color:#054b52;
+    border: 2px solid #054b52;
+    transition: background-color 0.3s;
+}
+
+.caption {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    color: white;
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 8px;
+    z-index: 2;
+}
+
+/* Animation */
+.fade {
+    animation: fade 1.5s ease-in-out;
+}
+
+@keyframes fade {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+.contact{
+    margin: 50px 200px;
+    display: flex;
+    gap:50px;
+}
+.card{
+    margin: 20px 0;
+    padding: 50px;
+    border-radius: 40px;
+    width: 350px;
+    
+}
+.query{
+    text-align: center;
+    margin: 40px;
+    font-size: 32px;
+}
+.query_inputs{
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid;
+}
+.query_submit{
+    display: block;
+    margin: 10px auto; 
+    width: 30%;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 19px;
+    background-color: #054b52;
+    color: white;
+    border: 1px solid;
+    cursor: pointer;
+    font-weight: 900;
+}
+.query_submit:hover{
+    background-color: #f0f0f0;
+    color: #054b52;
+}
+
+.p2{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.c1{
+    background-color: #d6d2f1;
+}
+.c2{
+    background-color: #f2ddd9;
+}
+.c3{
+    background-color: #d7ece4;
+}
+.contact_us{
+    border: 1px solid;
+    margin: 20px;
+    padding: 0 20px;
+    border-radius: 20px;
+}
+.location{
+    margin: 50px 100px;
+}
+.loc{
+    color: #333333;
+}
+.map{
+    border-radius: 5px;
+}
+
+.title {
+    padding: 32px 12px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    font-family: sans-serif;
+}
+.hos_img{
+    width: 100%;
+    min-height: 50%;
+}
+
+
+/*==========================================================================*/
+.label_book_appoinment{
+    color: #05696c;
+    padding: 10px;
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.input_tags{
+    font-size: 18px;
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #757575;
+}
+input[type="date"]{
+    color: black;
+}
+.app_type{
+    font-size: 20px;
+    margin: 10px 5px;
+    color: #333333;
+}
+.input_tags_check{
+    font-size: 18px;
+    margin-left: 5px;
+}
+.checkbox_option{
+    font-size: 18px;
+    color: #333333;
+}
+
+.booking_appoinment{
+    margin: 5% 170px 5% 220px;
+    display: flex;
+    gap: 150px;
+}
+.booking_img{
+    width:400px;
+    height: 450px;
+    margin-top: 100px;
+}
+.submit_button{
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 10px;
+    width: 100%;
+    padding: 20px 30px;
+    border-radius: 10px;
+    background-color: #05696c;
+    color: white;
+    border: 1px solid white;
+}
+.booking_form{
+    border-radius: 8px;
+    border: 4px solid #05696c;
+    padding: 35px 40px;
+    background-color: #fafafa;
+}
+
+/*==========================================================================*/
+
+.title_services{
+    text-align: center;
+    margin: 40px 0;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 30px 100px;
+}
+.col {
+    text-align: center;
+}
+
+.col{
+    max-width: 380px;
+    border-radius: 15px;
+    margin: 0 20px;
+    border: 5px solid #05696c;
+    padding: 50px 50px 80px 50px;
+}
+.col:hover{
+    background-color: #f0f0f0;
+    transition: 0.3s;
+    transform: scale(1.05); 
+}
+.col img{
+    margin-bottom: 30px;
+    text-align: center;
+    width: 140px;
+    height: 140px;
+}
+.specialties{
+    margin: 100px auto 10px auto;
+    background-color: #f0f0f0;
+    padding: 50px;
+}
+.title_specialties{
+    margin: 10px 0;
+    
+}
+.row2{
+    margin: 0 72px;
+    display: flex;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+.col2{
+    
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px 20px 70px 20px ;
+}
+.col2:hover{
+    transition: 0.3s;
+    transform: scale(1.05); 
+}
+.col2 a{
+    text-decoration: none;
+}
+
+
+
+/*==========================================================================*/
+.footer {
+    background-color: #f0f0f0;
+    color: #333333;
+    text-align: center;
+    padding: 20px 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 18px;
+}
+
+.footer a {
+    color: #054b52;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+.footer-content{
+    padding: 30px 0;
+}
