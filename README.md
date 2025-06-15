@@ -1,4 +1,5 @@
 🏥 Hospital Appointment System
+
 A comprehensive web-based Hospital Appointment Management System that streamlines patient interactions, doctor appointments, and administrative tasks. This platform provides a smooth experience for both patients and administrators with a clean UI and functional validations.
 
 🌐 Key Features
